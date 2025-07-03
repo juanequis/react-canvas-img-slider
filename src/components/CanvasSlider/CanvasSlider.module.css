@@ -1,0 +1,9 @@
+.slider {
+  border: 2px solid black;
+  background-color: #f2f2f2;
+  cursor: grab;
+
+  :active {
+    cursor: grabbing;
+  }
+}
