@@ -3,11 +3,11 @@ import { Image } from 'react-konva';
 import useImage from 'use-image';
 import CanvasSliderContext from './CanvasSliderContext';
 
-interface ImageWithAspectRatioProps {
+interface CanvasSliderImageProps {
   src: string;
 }
 
-const ImageWithAspectRatio = (props: ImageWithAspectRatioProps) => {
+const CanvasSliderImage = (props: CanvasSliderImageProps) => {
   const { width, height, index } = useContext(CanvasSliderContext);
   const { src } = props;
   const [image] = useImage(src);
@@ -32,7 +32,7 @@ const ImageWithAspectRatio = (props: ImageWithAspectRatioProps) => {
   return (
     <Image
       image={image}
-      x={index * width + (width - drawWidth) / 2} // Center the image horizontally in its slot
+      x={index * width + (width - drawWidth) / 2} // The offset for the current image + the distance to center it
       y={(height - drawHeight) / 2}
       width={drawWidth}
       height={drawHeight}
@@ -40,4 +40,4 @@ const ImageWithAspectRatio = (props: ImageWithAspectRatioProps) => {
   );
 };
 
-export { ImageWithAspectRatio as Image };
+export { CanvasSliderImage as Image };

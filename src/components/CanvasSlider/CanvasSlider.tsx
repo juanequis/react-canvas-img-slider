@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { Stage, Layer } from 'react-konva';
 import CanvasSliderContext from './CanvasSliderContext';
+import styles from './CanvasSlider.module.css';
 
 interface CanvasSliderProps {
   children: React.ReactNode[];
@@ -33,11 +34,7 @@ const CanvasSlider = (props: CanvasSliderProps) => {
           return { x: constrainedX, y: 0 };
         }}
         ref={stageRef}
-        style={{
-          border: '2px solid black',
-          boxSizing: 'border-box',
-          backgroundColor: '#f2f2f2',
-        }}
+        className={styles.slider}
       >
         <Layer>
           {children.map((child, index) => (
