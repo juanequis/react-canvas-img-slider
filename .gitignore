@@ -35,7 +35,10 @@ build/
 *.swns
 *.swns.lock
 
-# Miscellaneous
+# Environment variables
 .env
 .env.local
 .env.*.local
+
+# Miscellaneous
+coverage

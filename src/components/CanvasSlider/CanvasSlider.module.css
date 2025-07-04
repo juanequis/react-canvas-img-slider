@@ -1,5 +1,5 @@
 .slider {
-  border: 2px solid black;
+  outline: 1px solid #ccc;
   background-color: #f2f2f2;
   cursor: grab;
 
