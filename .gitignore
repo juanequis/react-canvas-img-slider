@@ -10,7 +10,7 @@ logs/
 *.log.*
 
 # Build output
-dist/
+# dist/
 build/
 *.tsbuildinfo
 
@@ -40,5 +40,5 @@ build/
 .env.local
 .env.*.local
 
-# Miscellaneous
+# Testing
 coverage
